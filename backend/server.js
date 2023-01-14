@@ -10,7 +10,7 @@ const PORT = 3000;
 
 app.post("/chatbot", (req, res) => {
     const message = req.body.message;
-    const number = message.match(/\d+/);
+    const number = String(message).match(/\d+/);
 
     if (number) {
         fetch(`http://numbersapi.com/${number}?type=trivia`)
