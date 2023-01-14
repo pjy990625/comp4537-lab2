@@ -5,7 +5,7 @@ $(document).ready(function () {
         const message = $('#chatbot-input').val();
         $.ajax({
             type: 'POST',
-            url: 'https://comp4537-lab2-qtu6.onrender.com/chatboat',
+            url: 'https://comp4537-lab2-qtu6.onrender.com/chatbot',
             data: { message: message },
             success: function (response) {
                 let newMessage = $('<div>', { class: 'message' }).text(response.text);
