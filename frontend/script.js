@@ -8,7 +8,6 @@ $(document).ready(function () {
             url: 'https://comp4537-lab2-qtu6.onrender.com/chatbot',
             data: { message: message },
             success: function (response) {
-                $('#chatbot-response').text(response.text);
                 let newMessage = $('<div>', { class: 'message' }).text(response.text);
                 let removeButton = $('<button>', { class: 'remove-button' }).text('Remove');
                 newMessage.append(removeButton);
